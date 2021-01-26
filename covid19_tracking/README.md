@@ -1,3 +1,6 @@
+![Covid-19](https://user-images.githubusercontent.com/78031893/105868774-dea9bb80-6039-11eb-89e0-c86fe56f749c.gif)
+
+
 # covid19_tracking
 
 A new Flutter application.
