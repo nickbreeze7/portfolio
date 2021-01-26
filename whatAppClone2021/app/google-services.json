@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746452313365",
+    "project_id": "whatappclone2021",
+    "storage_bucket": "whatappclone2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746452313365:android:71090f1009b6d5f9ccb51c",
+        "android_client_info": {
+          "package_name": "com.breezenick.whatappclone2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746452313365-1p1vjqljnapeoanauf9j1fmiuapq6ct8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbHRHBFGnHqPWYC7QUAvfvtYefHwoC3hY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746452313365-1p1vjqljnapeoanauf9j1fmiuapq6ct8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
