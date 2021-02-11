@@ -1,4 +1,4 @@
-![Covid-19](https://user-images.githubusercontent.com/78031893/105868774-dea9bb80-6039-11eb-89e0-c86fe56f749c.gif)
+![GitHub_20210129](https://user-images.githubusercontent.com/78031893/106284921-2a9d7000-6287-11eb-9275-a3ef14cd39a7.gif)
 
 
 # covid19_tracking
