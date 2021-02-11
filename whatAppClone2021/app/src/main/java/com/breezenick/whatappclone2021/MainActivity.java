@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+ 
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
        // super.onBackPressed();
 
-        if(tabLayout.getSelectedTabPosition()>0){
+        if(tabLayout.getSelectedTabPosition() > 0){
             tabLayout.selectTab(tabLayout.getTabAt(0));
         }else{
             if(doubleBackPressed){
