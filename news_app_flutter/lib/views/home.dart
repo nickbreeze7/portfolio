@@ -55,30 +55,36 @@ class _HomeState  extends State<Home>{
             )
           ],
         ),
-        centerTitle: True,
+        centerTitle: true,
         elevation: 0.0,
       ),
       body: _loading? Center(
-        child: Container{
-          child:Column(
-          children: <Widget>[
-            Container(
-            height: 80,
-            child:ListView.builder(
-            padding: EdgeInsets.symmetric(horizontal: 12),
-              itemCount:catList.length,
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index){
-                return CategoryTile(
-                  catList[index].catImage,
-                  catList[index].catName
-                );
-        },
-      ),
-      ),
+        child: Container(
+          child:CircularProgressIndicator(),
+        ),
+      ):
+            SingleChildScrollView(
+              child:Container(
+                child:Column(
+                  children: <Widget>[
+                Container(
+                height: 80,
+                child: ListView.builder(
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    itemCount: catList.length,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index){
+                      return CategoryTile(
+                        catList[index].catImage,
+                        catList[index].catName
+                      );
+                    },
+                ),
+              ),
       //ARTICLES
-      SizedBox((height:12, ),
+      SizedBox(height:12, ),
+
         Column(
         children: <Widget>[
           SizedBox(
@@ -99,24 +105,25 @@ class _HomeState  extends State<Home>{
       ],
       ),
       SizedBox(height: 12,),
+
       ListView.builder(
         itemCount: articles.length,
       shrinkWrap: true,
       physics: ClampingScrollPhysics(),
       itemBuilder: (context, index){
-          debugPrint('articles:$articles');
+          debugPrint('articles: $articles');
           log('articles: $articles');
 
           return NewsTile(
-          imageUrl:article[index].urlToImage,
-          title:articles[index].title,
-          description:articles[index].description,
-          articleUrl:articles[index].articleUrl
-        );
+                imageUrl:articles[index].urlToImage,
+                title:articles[index].title,
+                description:articles[index].description,
+                articleUrl:articles[index].articleUrl
+        ); //NewsTile
       })
       ],
       ),
-    ),
+        ),
       ),
     );
   }
