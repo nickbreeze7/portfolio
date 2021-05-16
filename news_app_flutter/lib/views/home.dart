@@ -84,7 +84,6 @@ class _HomeState  extends State<Home>{
               ),
       //ARTICLES
       SizedBox(height:12, ),
-
         Column(
         children: <Widget>[
           SizedBox(
@@ -104,8 +103,9 @@ class _HomeState  extends State<Home>{
       ),
       ],
       ),
-      SizedBox(height: 12,),
 
+
+      SizedBox(height: 12,),
       ListView.builder(
         itemCount: articles.length,
       shrinkWrap: true,
