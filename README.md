@@ -1,8 +1,8 @@
 ### Hi there 👋
 
-- I like studing Mobile Apps & new Technologies.
-- 🔭 I’m currently working on Java Programmer
-- 🌱 I’m currently learning Flutter, Navtive Android, WordPress
+- I like studying Mobile Technology.
+- 🔭 I’m currently working on Java Web Programmer
+- 🌱 I’m currently learning Flutter, Native Android, WordPress
 - 📫 How to reach me: nickcaestro@gmail.com
 
 
@@ -10,7 +10,7 @@
 
 Hello.
 My name is JungInPark. Just Call me Nick.
-I like studying Mobile Apps.
+I like studying Flutter & Native Android Technologies.
 
 
 <br>
