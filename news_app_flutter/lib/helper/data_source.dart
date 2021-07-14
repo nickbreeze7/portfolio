@@ -7,7 +7,8 @@ class News {
   List<Article> news = [];
 
   Future<void> getNews() async {
-    String url = "https://newsapi.org/v2/top-headlines?country=us&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey=3a5bf7bfd2b24bdd96878d37e760feb4";
+    //String url = "https://newsapi.org/v2/top-headlines?country=kr&sortBy=publishedAt&language=en&apiKey=d36bcea1cd6b4b40a2db2d9bddf57ee6";
+    String url = "https://newsapi.org/v2/top-headlines?country=kr&apiKey=d36bcea1cd6b4b40a2db2d9bddf57ee6";
 
     var response = await http.get(url);
     var jsonData = jsonDecode(response.body);
@@ -35,7 +36,9 @@ class CategoryNewsSource{
   List<Article> news = [];
 
   Future<void> getCategoryNews(String categoryName) async {
-    String url = "https://newsapi.org/v2/top-headlines?category=$categoryName&country=us&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey=3a5bf7bfd2b24bdd96878d37e760feb4";
+    //기존
+    String url = "https://newsapi.org/v2/top-headlines?category=$categoryName&country=kr&apiKey=d36bcea1cd6b4b40a2db2d9bddf57ee6";
+    //String url = "https://newsapi.org/v2/top-headlines?category=$categoryName&country=kr&sortBy=publishedAt&language=kr&apiKey=d36bcea1cd6b4b40a2db2d9bddf57ee6";
 
     var response = await http.get(url);
     var jsonData = jsonDecode(response.body);
