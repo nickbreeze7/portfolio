@@ -1,3 +1,6 @@
+![ScreenShot_완성](https://user-images.githubusercontent.com/78031893/126058399-191b8514-9ccd-4f91-8130-efc21eeb4885.jpg)
+
+
 # news_app_flutter
 
 Flutter News App
