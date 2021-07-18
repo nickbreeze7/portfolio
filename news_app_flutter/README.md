@@ -3,7 +3,7 @@
 
 # news_app_flutter
 
-Flutter News App
+Flutter Korean News App
 
 ## Getting Started
 
