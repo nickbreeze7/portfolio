@@ -45,7 +45,7 @@ class _HomeState  extends State<Home>{
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text("News", style: TextStyle(
-              letterSpacing: 3
+              letterSpacing: 0,
             ),
             ),
             Text("World", style: TextStyle(
