@@ -1,6 +1,6 @@
-# food_delivery
+# flutter_food_delivery_ui
 
-Flutter Ui Studing
+A new Flutter project.
 
 ## Getting Started
 
