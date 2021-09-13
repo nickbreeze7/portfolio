@@ -1,0 +1,4 @@
+io/github/ponnamkarthik/toast/fluttertoast/BuildConfig.java
+ io.github.ponnamkarthik.toast.fluttertoast.BuildConfig
+io/github/ponnamkarthik/toast/fluttertoast/FluttertoastPlugin.java
+ io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin

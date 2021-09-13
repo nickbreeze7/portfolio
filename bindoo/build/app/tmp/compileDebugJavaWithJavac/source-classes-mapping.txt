@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/bill/bindoo/MainActivity.java
+ com.bill.bindoo.MainActivity
+com/bill/bindoo/BuildConfig.java
+ com.bill.bindoo.BuildConfig

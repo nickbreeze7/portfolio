@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\drawable_launch_background.xml.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\drawable\\launch_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_billshopc.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\billshopc.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_billshopc.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-xhdpi\\billshopc.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_billshopc.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\billshopc.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_billshopc.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-mdpi\\billshopc.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_billshopc.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-hdpi\\billshopc.png"
+    },
+    {
+        "merged": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Studio-99x\\Desktop\\bindoo\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    }
+]

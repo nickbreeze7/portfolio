@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">82017572661-6558quk6r9ci0mnkfg7jkkmiqr644u56.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://bindoo-2a496.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">82017572661</string>
+    <string name="google_api_key" translatable="false">AIzaSyBnAak7c9HVojtTMiYyH8uSnQfqn4x_Ago</string>
+    <string name="google_app_id" translatable="false">1:82017572661:android:283ca3c28c018c27899e7c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBnAak7c9HVojtTMiYyH8uSnQfqn4x_Ago</string>
+    <string name="google_storage_bucket" translatable="false">bindoo-2a496.appspot.com</string>
+    <string name="project_id" translatable="false">bindoo-2a496</string>
+</resources>
