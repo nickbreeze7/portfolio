@@ -7,11 +7,11 @@ Home Screen
 
 Detail Screen & Add to Cart Screen
 
+![Detail Screen Cart Screen](https://user-images.githubusercontent.com/78031893/133889536-afd37371-56a0-4f84-9476-b9418f0444c9.jpg)
 
 
 # flutter_food_delivery_ui
-
-A new Flutter project.
+Flutter Food Delivery App Ui Challenge
 
 ## Getting Started
 
