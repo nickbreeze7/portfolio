@@ -1,3 +1,7 @@
+# Food Delivery App in Flutter
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/78031893/133891267-9e20bd71-d92f-4375-9968-f9c65ae9e49b.gif)
+
+
 # ScreenShots
 
 Home Screen
