@@ -7,7 +7,8 @@ Home Screen
 
 Detail Screen & Add to Cart Screen
 
-![Detail Screen Cart Screen](https://user-images.githubusercontent.com/78031893/133889536-afd37371-56a0-4f84-9476-b9418f0444c9.jpg)
+![Detail Screen Cart Screen_black](https://user-images.githubusercontent.com/78031893/133889652-19c1cb16-e061-4d7c-82b0-95f0bbeac106.jpg)
+
 
 
 # flutter_food_delivery_ui
