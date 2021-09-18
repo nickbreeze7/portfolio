@@ -1,6 +1,11 @@
 # ScreenShots
+
 Home Screen
-![Home Screen](https://user-images.githubusercontent.com/78031893/133889280-f51513b6-bfd8-46f1-9c11-cd8391875ea1.jpg)
+
+![Home Screen](https://user-images.githubusercontent.com/78031893/133889314-0a0878bd-7b24-4fb7-b9ba-b483791df629.jpg)
+
+
+Detail Screen & Add to Cart Screen
 
 
 
