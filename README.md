@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- I like studying Mobile Technology.
+- I like Mobile Technology.
 - 🔭 I’m currently working on Java Web Programmer
 - 🌱 I’m currently learning Flutter, Native Android, WordPress
 - 📫 How to reach me: nickcaestro@gmail.com
