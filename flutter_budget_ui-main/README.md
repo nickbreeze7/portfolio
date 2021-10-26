@@ -8,11 +8,13 @@ Home Screen
 
 ![Home Screen](https://user-images.githubusercontent.com/78031893/138902159-f014082c-fc7c-420b-8c8c-d6368f9729fd.jpg)
 
-Category Screen Food & Entertainment
-Food Category 
+
+Category Screen Food
+
 ![Category Screen_Food](https://user-images.githubusercontent.com/78031893/138902302-14f96d3e-766a-4ad4-8827-d3730473ab81.jpg)
 
-Entertainment Category
+
+Category Screen Entertainment
 ![Category Screen_Entertainment](https://user-images.githubusercontent.com/78031893/138902339-4ea89aab-12bb-48eb-8b3b-c599797d7b63.jpg)
 
 
