@@ -1,6 +1,7 @@
-# flutter_budget_ui
+# Budget App with Flutter
+![Budget App](https://user-images.githubusercontent.com/78031893/138901584-b1adbca6-2650-4d95-8c35-c1932454bd03.gif)
 
-A new Flutter project.
+
 
 ## Getting Started
 
