@@ -1,6 +1,24 @@
-# flutter_budget_ui
+# Budget App with Flutter
+![Budget App](https://user-images.githubusercontent.com/78031893/138901584-b1adbca6-2650-4d95-8c35-c1932454bd03.gif)
 
-A new Flutter project.
+
+# ScreenShots
+
+Home Screen
+
+![Home Screen](https://user-images.githubusercontent.com/78031893/138902159-f014082c-fc7c-420b-8c8c-d6368f9729fd.jpg)
+
+
+Category Screen Food
+
+![Category Screen_Food](https://user-images.githubusercontent.com/78031893/138902302-14f96d3e-766a-4ad4-8827-d3730473ab81.jpg)
+
+
+
+Category Screen Entertainment
+
+
+![Category Screen_Entertainment](https://user-images.githubusercontent.com/78031893/138902669-aa0b46b1-bc95-4bbc-a4db-678d9e99bd24.jpg)
 
 ## Getting Started
 
