@@ -1,4 +1,6 @@
-# flutter_movies_app
+# Flutter Clone Movies App 
+
+![Flutter_Movies_App_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/78031893/147875024-f40a9224-9877-4f8d-ba51-8d28fb297f60.gif)
 
 Flutter Movies App
 
