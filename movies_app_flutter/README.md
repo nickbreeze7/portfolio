@@ -1,6 +1,8 @@
 # Flutter Clone Movies App 
 Flutter Movies App with themoviedb api.
 
+
+
 # Features
 - Homescreen
 - Finder Screen
@@ -11,6 +13,7 @@ Flutter Movies App with themoviedb api.
 - fluttertoast: ^8.0.8
 - http: ^0.13.4
 - path_provider: ^2.0.8
+
 
 
 # ScreenShots
