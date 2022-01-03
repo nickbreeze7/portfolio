@@ -6,9 +6,11 @@ Flutter Movies App with themoviedb api.
 - Finder Screen
 - Drawer Screen
 - Details Screen
-- Sizer : ^2.0.15
-- Http : ^0.13.4
-- Path Provider : ^2.0.8 
+- flutter_spinkit: ^5.1.0
+- cached_network_image: ^3.2.0
+- fluttertoast: ^8.0.8
+- http: ^0.13.4
+- path_provider: ^2.0.8
 
 
 # ScreenShots
