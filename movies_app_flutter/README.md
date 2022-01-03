@@ -3,10 +3,11 @@
 
 # ScreenShots
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| Home screen  | Drawer Screen  | Finder Screen  | Details Screen  |
+| :---         |     :---:      |          ---:  |           ---:  |
+| git status   | git status     | git status     | git status      |
+
+
 
 
 ## Getting Started
