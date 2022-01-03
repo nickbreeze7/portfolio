@@ -5,8 +5,7 @@
 
 | Home screen | Drawer Screen | Finder Screen | Details Screen |
 |    :---:    |     :---:     |     :---:     |     :---:      |
-|![Home Screen](https://user-images.githubusercontent.com/78031893/147929138-fa063eb2-9b10-47be-919c-d315cca8176f.jpg) 
-|![Drawer Screen](https://user-images.githubusercontent.com/78031893/147929672-ecdb995e-77c0-4fca-91c1-03961529a550.jpg)
+|![Home Screen](https://user-images.githubusercontent.com/78031893/147929138-fa063eb2-9b10-47be-919c-d315cca8176f.jpg) |![Drawer Screen](https://user-images.githubusercontent.com/78031893/147929672-ecdb995e-77c0-4fca-91c1-03961529a550.jpg)
 | git status     | git status      |
 
 
