@@ -17,7 +17,7 @@ Flutter Movies App with themoviedb api.
 
 | Home screen | Drawer Screen | Finder Screen | Details Screen |
 |    :---:    |     :---:     |     :---:     |     :---:      |
-|![Home Screen2](https://user-images.githubusercontent.com/78031893/147930739-37ae6aa2-5e07-4f25-aa61-6dcf1c80775e.jpg)|![Drawer Screen](https://user-images.githubusercontent.com/78031893/147929672-ecdb995e-77c0-4fca-91c1-03961529a550.jpg) |![Finder Screen](https://user-images.githubusercontent.com/78031893/147929830-0f10d98b-9449-4a86-b940-e1b229f19164.jpg) | ![Details Screen](https://user-images.githubusercontent.com/78031893/147929908-b1277e1b-6e10-41ed-a08e-a740a41f9004.jpg) |
+|![Home Screen2](https://user-images.githubusercontent.com/78031893/147930739-37ae6aa2-5e07-4f25-aa61-6dcf1c80775e.jpg)| ![Drawer Screen02](https://user-images.githubusercontent.com/78031893/147930843-8ce59960-eee5-4ac4-baf0-dfcd1caf29f9.jpg)| ![Finder Screen02](https://user-images.githubusercontent.com/78031893/147930928-888690a0-0c57-4fd4-8538-049aa3518df3.jpg)| 
 
 
 
