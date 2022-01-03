@@ -3,8 +3,8 @@
 
 # ScreenShots
 
-| Home screen  | Drawer Screen  | Finder Screen  | Details Screen  |
-| :---         |     :---:      |          ---:  |           ---:  |
+| Home screen | Drawer Screen | Finder Screen | Details Screen |
+|    :---:    |     :---:     |     :---:     |     :---:      |
 |![Home Screen](https://user-images.githubusercontent.com/78031893/147929138-fa063eb2-9b10-47be-919c-d315cca8176f.jpg) |![Drawer Screen](https://user-images.githubusercontent.com/78031893/147929278-e044e14e-eec4-407f-85fe-a54beabebf9e.jpg) | git status     | git status      |
 
 
