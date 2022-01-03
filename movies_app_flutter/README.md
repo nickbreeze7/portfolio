@@ -5,7 +5,8 @@
 
 | Home screen  | Drawer Screen  | Finder Screen  | Details Screen  |
 | :---         |     :---:      |          ---:  |           ---:  |
-| git status   | git status     | git status     | git status      |
+|  ![Home Screen](https://user-images.githubusercontent.com/78031893/147929138-fa063eb2-9b10-47be-919c-d315cca8176f.jpg)
+  | git status     | git status     | git status      |
 
 
 
