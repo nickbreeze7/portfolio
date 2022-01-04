@@ -1,16 +1,27 @@
-# movies_app_flutter
+# Flutter Clone Movies App 
+Flutter Movies App with themoviedb api.
 
-Flutter Movie App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Features
+- Homescreen
+- Finder Screen
+- Drawer Screen
+- Details Screen
+- flutter_spinkit: ^5.1.0
+- cached_network_image: ^3.2.0
+- fluttertoast: ^8.0.8
+- http: ^0.13.4
+- path_provider: ^2.0.8
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# ScreenShots
+
+| Home screen | Drawer Screen | Finder Screen | Details Screen |
+|    :---:    |     :---:     |     :---:     |     :---:      |
+|![Home Screen2](https://user-images.githubusercontent.com/78031893/147930739-37ae6aa2-5e07-4f25-aa61-6dcf1c80775e.jpg)| ![Drawer Screen02](https://user-images.githubusercontent.com/78031893/147930843-8ce59960-eee5-4ac4-baf0-dfcd1caf29f9.jpg)| ![Finder Screen02](https://user-images.githubusercontent.com/78031893/147930928-888690a0-0c57-4fd4-8538-049aa3518df3.jpg)| ![Details Screen02](https://user-images.githubusercontent.com/78031893/147931109-7c667db6-5110-4847-a52f-c91ba99cd4d1.jpg) |
+
+
+
+

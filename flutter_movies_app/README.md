@@ -1,6 +1,23 @@
-# flutter_movies_app
+# Flutter Clone Movies App 
+![Flutter Movies App](https://user-images.githubusercontent.com/78031893/147875251-e41fbf90-5111-419c-9b19-ee7de118aa00.gif)
 
-Flutter Movies App
+
+
+# ScreenShots
+Home Screen
+
+
+Drawer Screen
+
+
+Finder Screen
+
+
+Details Screen
+
+
+
+
 
 ## Getting Started
 
