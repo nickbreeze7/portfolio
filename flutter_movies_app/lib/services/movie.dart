@@ -64,7 +64,7 @@ class MovieModel{
 
     var data = await _getData(
         url:
-          '$kThemoviedbSearchURL/?api_key=${secret.themoviedbApi}&language=en-US&page=1&include_adult=false&query=$movieName',
+          '$kThemoviedbSearchURL/?api_key=${secret.themoviedbApi}&language=ko-KR&page=1&include_adult=false&query=$movieName',
     );
     for(var item in data["results"]){
       try {
@@ -95,7 +95,7 @@ class MovieModel{
 
     Future<MovieDetails> getMovieDetails({required String movieID}) async {
     var data = await _getData(
-        url: '$kThemoviedbURL/$movieID?api_key=${secret.themoviedbApi}&language=en-US',
+        url: '$kThemoviedbURL/$movieID?api_key=${secret.themoviedbApi}&language=ko-KR',
     );
     List<String> temp = [];
     for(var item in data["genres"]) {
@@ -125,7 +125,7 @@ class MovieModel{
       if(item != ""){
         var data = await _getData(
           url:
-             '$kThemoviedbURL/$item?api_key=${secret.themoviedbApi}&language=en-US',
+             '$kThemoviedbURL/$item?api_key=${secret.themoviedbApi}&language=ko-KR',
         );
 
         temp.add(
