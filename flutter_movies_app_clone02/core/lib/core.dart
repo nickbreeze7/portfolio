@@ -17,6 +17,7 @@ export 'src/redux/actor/actor_actions.dart';
 export 'src/redux/actor/actor_selectors.dart';
 export 'src/redux/app/app_state.dart';
 export 'src/redux/event/event_actions.dart';
+
 export 'src/redux/event/event_selectors.dart';
 export 'src/redux/show/show_actions.dart';
 export 'src/redux/show/show_selectors.dart';
