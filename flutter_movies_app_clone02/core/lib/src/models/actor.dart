@@ -1,13 +1,15 @@
 import 'package:meta/meta.dart';
 
 class Actor {
+
+  final String name;
+  final String avatarUrl;
+
   Actor({
     required this.name,
     this.avatarUrl,
 });
 
-  final String name;
-  final String avatarUrl;
 
   @override
   bool operator ==(Object other) =>
