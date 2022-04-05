@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class MyPage extends StatelessWidget {
+  const MyPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lime.shade200,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: Text('MyPage'),
       ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'Profile',
+          'MyPage',
           style: TextStyle(fontSize: 50),
         ),
       ),

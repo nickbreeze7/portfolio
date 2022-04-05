@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class AboutPage extends StatelessWidget {
-  const AboutPage({Key? key}) : super(key: key);
+class WalletPage extends StatelessWidget {
+  //const WalletPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan.shade200,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('About'),
+        title: Text('Wallet'),
       ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'About',
+          'Wallet',
           style: TextStyle(fontSize: 50),
         ),
       ),
