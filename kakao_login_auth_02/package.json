@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "firebase": "^9.8.2",
+    "firebase-auth": "^0.1.2"
+  }
+}
