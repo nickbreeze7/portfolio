@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "865561153079",
+    "project_id": "kakao-auth-login-test-02",
+    "storage_bucket": "kakao-auth-login-test-02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865561153079:android:2c4daa4cc5b87b603bb9b2",
+        "android_client_info": {
+          "package_name": "com.nickbreeze.kakao_login_auth_03"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865561153079-kafkhen61pu96o54lhtlettblbe5fijt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjVCufwjfgNjmhfcEJgnw532Moli0OBH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865561153079-kafkhen61pu96o54lhtlettblbe5fijt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
