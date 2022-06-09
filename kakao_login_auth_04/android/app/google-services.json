@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "181356948809",
+    "project_id": "kakaologinauth04",
+    "storage_bucket": "kakaologinauth04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:181356948809:android:4d1ab2a8498cf041027e98",
+        "android_client_info": {
+          "package_name": "com.example.kakao_login_auth_04"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "181356948809-10bc93228b1mejib2m6fnmtoujr9gb9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkE5nq1qM-nXuQc19rO9oiS5W5qqrFERk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181356948809-10bc93228b1mejib2m6fnmtoujr9gb9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
