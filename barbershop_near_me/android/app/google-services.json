@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "388357171116",
+    "project_id": "barbershop-near-me-c4e37",
+    "storage_bucket": "barbershop-near-me-c4e37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388357171116:android:dc328024ab6808f8e4bc09",
+        "android_client_info": {
+          "package_name": "com.nickbreeze.barbershop_near_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388357171116-61942a2r3q064ua5fcacftngikautkpj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmJnEBgnGwTuxeS9L8_BVkc7iBs0T6_do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388357171116-61942a2r3q064ua5fcacftngikautkpj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
