@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../models/place.dart';
 
 class PlacesService {
-  final key = 'AIzaSyCF40kZoFy6eQPMrqAbejKTDVnI3X3MKRI';
+  final key = 'Your Key';
 
   Future<List<Place>> getPlaces(double lat, double lng) async {
     var url = Uri.parse(
