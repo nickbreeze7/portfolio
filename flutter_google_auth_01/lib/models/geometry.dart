@@ -1,4 +1,4 @@
-import 'location.dart';
+import 'package:flutter_google_auth_01/models/location.dart';
 
 class Geometry {
   final Location location;

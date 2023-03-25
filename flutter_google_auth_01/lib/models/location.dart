@@ -4,7 +4,7 @@ class Location {
 
   Location({required this.lat, required this.lng});
 
-  Location.fromJson(Map<dynamic, dynamic> parsedJson)
-      : lat = parsedJson['lat'],
-        lng = parsedJson['lng'];
+  factory Location.fromJson(Map<dynamic, dynamic> parsedJson) {
+    return Location(lat: parsedJson['lat'], lng: parsedJson['lng']);
+  }
 }

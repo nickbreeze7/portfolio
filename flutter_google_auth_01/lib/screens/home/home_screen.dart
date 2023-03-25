@@ -4,17 +4,17 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../sign_in.dart';
 
-class FeedScreen extends StatefulWidget {
-  const FeedScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   //const ProfileScreen({Key? key}) : super(key: key);
   //final User _user;
 
   @override
-  State<FeedScreen> createState() => _FeedScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _FeedScreenState extends State<FeedScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   //late User _user;
   late String username;
   String userEmail = "";

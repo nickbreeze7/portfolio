@@ -12,7 +12,7 @@ class GeoLocatorService {
 
   Future<double> getDistance(double startLatitude, double startLongitude,
       double endLatitude, double endLongitude) async {
-    return await Geolocator.distanceBetween(
+    return Geolocator.distanceBetween(
         startLatitude, startLongitude, endLatitude, endLongitude);
   }
 }

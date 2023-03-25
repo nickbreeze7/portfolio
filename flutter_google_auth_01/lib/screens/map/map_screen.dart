@@ -8,8 +8,11 @@ import '../../services/places_service.dart';
 import 'map_search_screen.dart';
 
 // 신규?? -
-const kGoogleApiKey = 'AIzaSyCF40kZoFy6eQPMrqAbejKTDVnI3X3MKRI';
+//const kGoogleApiKey = 'AIzaSyCF40kZoFy6eQPMrqAbejKTDVnI3X3MKRI';
 //GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: kGoogleApiKey);
+void main() => runApp(MapScreen());
+
+//const MapScreen({Key? key}) : super(key: key);
 
 class MapScreen extends StatelessWidget {
   final locatorService = GeoLocatorService();
@@ -20,18 +23,42 @@ class MapScreen extends StatelessWidget {
     return MultiProvider(
       providers: [
         FutureProvider(
-            create: (context) => locatorService.getLocation(),
-            initialData: null //null -> []로 하면 에러발생!!!
-            ),
-        ProxyProvider<Position?, Future<List<Place>>?>(
-          update: (context, position, places) {
-            if ((position != null)) {
-              return placesService.getPlaces(
-                  position.latitude, position.longitude);
-            } else {
-              return null;
-            }
+          create: (context) => locatorService.getLocation(),
+          initialData: null,
+          // initialData: Future.value(List<Position?>.empty()),
+          //initialData: null,
+          // initialData: [],
+        ),
+        /*  FutureProvider(
+          create: (context) {
+            ImageConfiguration configuration =
+                createLocalImageConfiguration(context);
+            return BitmapDescriptor.fromAssetImage(
+                configuration, 'assets/selectedMarker.png');
           },
+          initialData:null,
+          //initialData: [],
+          // initialData: Future.value(List<BitmapDescriptor?>.empty()),
+          //initialData: null,
+        ),*/
+        //ProxyProvider2<Position?, BitmapDescriptor?, Future<List<Place>>?>(
+        ProxyProvider<Position?, Future<List<Place>>?>(
+          // update: (context, position, icon, places) {
+          update: (context, position, places) {
+            return (position != null)
+                ? placesService.getPlaces(position.latitude, position.longitude)
+                : null;
+          },
+          /*  update: (context, position, icon, places) {
+            //update: (context, position, places) {
+            return (position != null)
+                ? placesService.getPlaces(
+                    //  position.latitude, position.longitude)
+                    position.latitude,
+                    position.longitude,
+                    icon!)
+                : Future.value([]);
+          },*/
         )
       ],
       child: MaterialApp(
