@@ -7,8 +7,10 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'package:provider/provider.dart';
+import '../../models/Business.dart';
 import '../../models/place.dart';
 import '../../services/geolocator_service.dart';
+import '../../services/getTodayHours.dart';
 import '../../services/marker_service.dart';
 import 'map_listview_screen.dart';
 
@@ -62,6 +64,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     markers = {};
     List<Place>? places;
 
+
     places?.forEach((place) {
       if (place.geometry.location.lat != null &&
           place.geometry.location.lng != null) {
@@ -93,6 +96,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
 
   final kGoogleApiKey = 'AIzaSyDGPBoY_wVMpu1Uci3IYHGNBJUYWxljOpA';
   String buildPhotoURL(String photoReference) {
+    //return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
     return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
   }
 
@@ -240,32 +244,34 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                 // fix renderflex overflowed by 18 pixels on the bottom error
                                 child: Row(
                                   children: <Widget>[
-                                    Padding(
-                                      padding:
-                                      const EdgeInsets.only(
-                                          left: 30,
-                                          top: 7,
-                                          bottom: 7,
-                                          right: 9),
-                                      child: Container(
-                                        height: 86.00,
-                                        width: 86.00,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              fit: BoxFit.fill,
-                                              /*     image: NetworkImage(
-                                                            places[0]
-                                                                .photos![0]
-                                                                .photoReference),*/
-                                              image: NetworkImage(
-                                                  buildPhotoURL(places[i]
-                                                      .photos![i]
-                                                      .photoReference)
-                                              )
+                                    Expanded(  // 이거 써서 Row 에러 해결.. 그담에 사진...
+                                      child: Padding(
+                                        padding:
+                                        const EdgeInsets.only(
+                                            left: 30,
+                                            top: 7,
+                                            bottom: 7,
+                                            right: 9),
+                                        child: Container(
+                                          height: 86.00,
+                                          width: 86.00,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                fit: BoxFit.fill,
+                                                /*     image: NetworkImage(
+                                                              places[0]
+                                                                  .photos![0]
+                                                                  .photoReference),*/
+                                                image: NetworkImage(
+                                                    buildPhotoURL(places[0]
+                                                        .photos![0]
+                                                        .photoReference)
+                                                )
+                                            ),
+                                            borderRadius:
+                                            BorderRadius.circular(
+                                                5.00),
                                           ),
-                                          borderRadius:
-                                          BorderRadius.circular(
-                                              5.00),
                                         ),
                                       ),
                                     ),
@@ -309,6 +315,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                                             color:
                                                             Colors.amber),
                                                     itemCount: 5,
+                                                   // itemCount: places!.length,
                                                     itemSize: 10.0,
                                                     direction: Axis.horizontal,
                                                   )
@@ -318,39 +325,22 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                               Container(
                                                 width: 200,
                                                 child: Text(
-                                                  places[0].openingHours!.openNow != false
-                                                      ? '영업중' : '영업종료',
-
+                                                 /* places[0].openingHours!.openNow != false ? '영업중' : '영업종료',*/
+                                                 /* places[0].openingHours!.openNow != false ? '영업중 ${getTodayHours(places[0].openingHours!.weekdayText!)}' : '영업종료 ${getTodayHours(places[0].openingHours!.weekdayText!)}',*/
+                                                  '\n ${places[0].openingHours!.openNow!  ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[0].openingHours!.weekdayText!)}',
                                                   overflow:
                                                   TextOverflow
-                                                      .ellipsis,
+                                                  .ellipsis,
                                                   maxLines: 4,
                                                   style: TextStyle(
                                                     fontFamily:
                                                     "Montserrat",
                                                     fontSize: 10,
                                                     color: Color(
-                                                        0xff000000),
+                                                        0xff000000)
                                                   ),
                                                 ),
                                               ),
-                                              /* Container(
-                                                            width: 200,
-                                                            child: Text(
-                                                           places[0].openingHours.periods[].close?.time,
-                                                              overflow:
-                                                              TextOverflow
-                                                                  .ellipsis,
-                                                              maxLines: 4,
-                                                              style: TextStyle(
-                                                                fontFamily:
-                                                                "Montserrat",
-                                                                fontSize: 10,
-                                                                color: Color(
-                                                                    0xff000000),
-                                                              ),
-                                                            ),
-                                                          ),*/
                                               Container(
                                                 width: 200,
                                                 child: Text(
@@ -374,6 +364,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                         ],
                                       ),
                                     ),
+
                                   ],
                                 ),
                               ),
@@ -381,7 +372,25 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                           },
                         ),
                       ),
-                    )),
+                    )
+                ),
+               /* Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Chip (
+                    label: Text(
+                     // '${business.openingHours.openNow ? 'Open' : 'Closed' ?? 'No Data'}: ${getTodayHours(business.openingHours.weekdayText)}',
+                    //   '\n${places[i].openingHours!.openNow!  ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[i].openingHours!.weekdayText!)}',
+                      ' ${places[i].openingHours!.openNow!  ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[i].openingHours!.weekdayText!)}',
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  backgroundColor: business.openingHours.openNow
+                  ? Colors.green
+                : Colors.red,
+                ),*/
                 SizedBox(
                   height: 10.0,
                 ),
