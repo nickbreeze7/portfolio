@@ -11,7 +11,6 @@ class Period {
      return Period(
        close:parsedJson['close']!=null? Close.fromJson(parsedJson['close']):null,
        open:parsedJson['open']!=null? Open.fromJson(parsedJson['open']):null,
-
-   );
+     );
    }
 }

@@ -7,7 +7,6 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'package:provider/provider.dart';
-import '../../models/Business.dart';
 import '../../models/place.dart';
 import '../../services/geolocator_service.dart';
 import '../../services/getTodayHours.dart';
@@ -94,7 +93,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     _controller.complete(controller);
   }
 
-  final kGoogleApiKey = 'Your Key';
+  final kGoogleApiKey = 'AIzaSyDGPBoY_wVMpu1Uci3IYHGNBJUYWxljOpA';
   String buildPhotoURL(String photoReference) {
     //return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
     return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
@@ -125,10 +124,10 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     return FutureProvider(
       create: (context) => placesProvider,
       initialData: null,
-      /*  catchError: (context, error) {
+        catchError: (context, error) {
         print(error);
         return 'error';
-      } ,*/
+      } ,
       child: Scaffold(
         body: (currentPosition != null)
             ? Consumer<List<Place>?>(
@@ -325,9 +324,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                               Container(
                                                 width: 200,
                                                 child: Text(
-                                                 /* places[0].openingHours!.openNow != false ? '영업중' : '영업종료',*/
-                                                 /* places[0].openingHours!.openNow != false ? '영업중 ${getTodayHours(places[0].openingHours!.weekdayText!)}' : '영업종료 ${getTodayHours(places[0].openingHours!.weekdayText!)}',*/
-                                                  '\n ${places[0].openingHours!.openNow!  ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[0].openingHours!.weekdayText!)}',
+                                                  places[0].openingHours!.openNow != false ? '영업중' : '영업종료',
                                                   overflow:
                                                   TextOverflow
                                                   .ellipsis,
