@@ -16,20 +16,30 @@ class OpeningHours {
     : openNow = parsedJson['open_now'];
 */
 
- factory OpeningHours.fromJson(Map<dynamic, dynamic> parsedJson) {
+ factory OpeningHours.fromJson(Map<String, dynamic> parsedJson) {
      return OpeningHours(
       openNow : parsedJson['open_now'],
        // weekdayText 밑에 (....List<dynamic>) 가로 하니까 에러가 다 사라짐... 20230726
        weekdayText : parsedJson['weekday_text'] != null
                    ? (parsedJson['weekday_text'] as List<dynamic>).cast<String>():null,
-      /* weekdayText :  parsedJson['weekday_text'].cast<dynamic>(),*/
        periods: (parsedJson['periods'] != null)
            ? parsedJson['periods']
            .map<Period>((parsedJson) => Period.fromJson(parsedJson))
            .toList()
-           : List.empty(),
-     );
+           //: List.empty(),
+             : null,
+
+   );
    }
+
+    Map<String, dynamic> toJson() {
+      final Map<String, dynamic> data = new Map<String, dynamic>();
+      data['open_now'] = this.openNow;
+      data['weekday_text'] = this.weekdayText;
+      data['periods'] = this.periods!.toList();
+      return data;
+    }
+
 }
 
 

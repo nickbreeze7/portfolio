@@ -1,8 +1,8 @@
 class Photos {
-   final String photoReference;
-   final int height;
-   final int width;
-   final List<String> htmlAttributions;
+    final String photoReference;
+    final int height;
+    final int width;
+    final List<String> htmlAttributions;
 
   Photos(
       {required this.photoReference,
@@ -14,7 +14,7 @@ class Photos {
   Geometry.fromJson(Map<dynamic, dynamic> parsedJson)
       : location = Location.fromJson(parsedJson['location']);
   */
-  Photos.fromJson(Map<dynamic, dynamic> parsedJson)
+  Photos.fromJson(Map<String, dynamic> parsedJson)
       : photoReference = parsedJson['photo_reference'],
         height = parsedJson['height'],
         width = parsedJson['width'],
@@ -23,10 +23,20 @@ class Photos {
             ? (parsedJson['html_attributions'] as List<dynamic>).cast<String>()
             : [];*/
 
+    Map<String, dynamic> toJson() {
+      final Map<String, dynamic> data =  Map<String, dynamic>();
+      data['height'] = this.height;
+      data['html_attributions'] = this.htmlAttributions;
+      data['photo_reference'] = this.photoReference;
+      data['width'] = this.width;
+      return data;
+    }
+}
+
 /*  Photos.fromJson(Map<dynamic, dynamic> parsedJson) {
     height = parsedJson['height'];
     htmlAttributions = parsedJson['html_attributions'].cast<String>();
     photoReference = parsedJson['photo_reference'];
     width = parsedJson['width'];
   }*/
-}
+

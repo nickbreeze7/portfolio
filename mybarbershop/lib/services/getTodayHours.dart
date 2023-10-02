@@ -1,11 +1,17 @@
 import 'package:intl/intl.dart';
+import 'package:mybarbershop/main.dart';
 
-String getTodayHours(List<String> weekdayHours) {
+
+String  getTodayHours(List<String> weekdayHours)  {
+
   String todayDate = DateFormat('EEEE').format(DateTime.now());
+
+  logger.d("todayDate:=====================>> $todayDate");
+
   int numDate = 0;
   switch (todayDate) {
     case 'Monday':
-      numDate = 0;
+      numDate;
       break;
     case 'Tuesday':
       numDate = 2;
@@ -23,8 +29,15 @@ String getTodayHours(List<String> weekdayHours) {
       numDate = 6;
       break;
   }
+  logger.d("numDate:=====================>> $numDate");
 
-  String todayHours = weekdayHours[numDate]
+  logger.d("todayDate:=====================>> $todayDate");
+
+  logger.d("111111111111");
+
+  logger.d("weekdayHours:=====================>> $weekdayHours");
+
+  String  todayHours =  weekdayHours[numDate]
       .replaceAll('$todayDate: ', '')
       .replaceAll('Closed', '')
       .replaceAll('Open ', '');

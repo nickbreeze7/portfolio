@@ -8,7 +8,8 @@ import '../../services/geolocator_service.dart';
 import '../../services/marker_service.dart';
 
 class MapListviewScreen extends StatelessWidget {
-  // const MapListviewScreen extends({Key? key}) : super(key: key);
+    const MapListviewScreen ({Key? key}) : super(key: key);
+   // MapListviewScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +24,16 @@ class MapListviewScreen extends StatelessWidget {
       create: (context) => placesProvider,
       initialData: null,
       child: Scaffold(
+
         body: (currentPosition != null)
+
             ? Consumer<List<Place>?>(
                 /* child: ElevatedButton(
                     child: Text('메인화면으로'),
                     onPressed: () {
                       Navigator.pop(context);
                     }),*/
+
                 builder: (_, places, __) {
                   /* var markers;
                   if ((places != null)) {
@@ -53,7 +57,8 @@ class MapListviewScreen extends StatelessWidget {
                       ),*/
                       Expanded(
                         child: ListView.builder(
-                            // scrollDirection: Axis.horizontal,
+                            //shrinkWrap: true,
+                            scrollDirection: Axis.horizontal,
                             itemCount: places!.length,
                             itemBuilder: (context, index) {
                               return FutureProvider(
@@ -63,64 +68,70 @@ class MapListviewScreen extends StatelessWidget {
                                     places[index].geometry.location.lat,
                                     places[index].geometry.location.lng),
                                 initialData: null,
-                                child: Card(
-                                  child: ListTile(
-                                    title: Text(
-                                      places[index].name,
-                                    ),
-                                    subtitle: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: <Widget>[
-                                        (places[index].rating != null)
-                                            ? Row(
-                                                children: <Widget>[
-                                                  RatingBarIndicator(
-                                                    rating:
-                                                        places[index].rating,
-                                                    itemBuilder: (context,
-                                                            index) =>
-                                                        Icon(Icons.star,
-                                                            color:
-                                                                Colors.amber),
-                                                    itemCount: 5,
-                                                    itemSize: 10.0,
-                                                    direction: Axis.horizontal,
-                                                  )
-                                                ],
-                                              )
-                                            : Row(),
-                                        SizedBox(
-                                          height: 5.0,
-                                        ),
-                                        Consumer<double?>(builder:
-                                            (context, kilometers, widget) {
-                                          return (kilometers != null)
-                                              ? Text(
-                                                  // 일단  miles로 나타내고 , 추후에 킬로미터로 바꿈.
-                                                  // '${places[index].vicinity}\u00b7 ${(meters / 1609).round()} mi')
-                                                  '${places[index].vicinity}\u00b7 ${(kilometers / 1000).round()} km')
-                                              : Container();
-                                        })
-                                      ],
-                                    ),
-                                    trailing: IconButton(
-                                      icon: Icon(Icons.directions),
-                                      color: Theme.of(context).primaryColor,
-                                      // onPressed 누르면  예약하기로 넘어가기
-                                      // markerService에  InfoWindow에 화면 크게 해서
-                                      // 웬만한 정보 다 담기
-                                      onPressed: () {
-                                        /* _launchMapsUrl(
-                                        places[index]
-                                            .geometry
-                                            .location
-                                            .lat,
-                                        places[index]
-                                            .geometry
-                                            .location
-                                            .lng);*/
-                                      },
+                                child: Container(
+                                 // width: double.infinity,// <== 이걸 사용하면 가로로 보여짐.!!!
+                                  width: 200.0,
+                                  //height: 160.0,
+                                  //20230928
+                                  child: Card(
+                                    child: ListTile(
+                                      title: Text(
+                                        places[index].name,
+                                      ),
+                                      subtitle: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          (places[index].rating != null)
+                                              ? Row(
+                                                  children: <Widget>[
+                                                    RatingBarIndicator(
+                                                      rating:
+                                                          places[index].rating,
+                                                      itemBuilder: (context,
+                                                              index) =>
+                                                          Icon(Icons.star,
+                                                              color:
+                                                                  Colors.amber),
+                                                      itemCount: 5,
+                                                      itemSize: 10.0,
+                                                      direction: Axis.horizontal,
+                                                    )
+                                                  ],
+                                                )
+                                              : Row(),
+                                          SizedBox(
+                                            height: 5.0,
+                                          ),
+                                          Consumer<double?>(builder:
+                                              (context, kilometers, widget) {
+                                            return (kilometers != null)
+                                                ? Text(
+                                                    // 일단  miles로 나타내고 , 추후에 킬로미터로 바꿈.
+                                                    // '${places[index].vicinity}\u00b7 ${(meters / 1609).round()} mi')
+                                                    '${places[index].vicinity}\u00b7 ${(kilometers / 1000).round()} km')
+                                                : Container();
+                                          })
+                                        ],
+                                      ),
+                                      trailing: IconButton(
+                                        icon: Icon(Icons.directions),
+                                        color: Theme.of(context).primaryColor,
+                                        // onPressed 누르면  예약하기로 넘어가기
+                                        // markerService에  InfoWindow에 화면 크게 해서
+                                        // 웬만한 정보 다 담기
+                                        onPressed: () {
+                                          /* _launchMapsUrl(
+                                          places[index]
+                                              .geometry
+                                              .location
+                                              .lat,
+                                          places[index]
+                                              .geometry
+                                              .location
+                                              .lng);*/
+                                        },
+                                      ),
                                     ),
                                   ),
                                 ),

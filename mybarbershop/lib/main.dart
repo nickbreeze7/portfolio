@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:logger/logger.dart';
 import 'login_page.dart';
+
+
+var logger = Logger(
+  printer: PrettyPrinter(),
+);
 
 
 void main() => runApp(MyApp());

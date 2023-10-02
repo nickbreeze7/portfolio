@@ -4,7 +4,7 @@ class Close {
 
   Close({required this.day, required this.time});
 
-  factory Close.fromJson(Map<dynamic, dynamic> parsedJson) {
+  factory Close.fromJson(Map<String, dynamic> parsedJson) {
     return Close(
       day:parsedJson['day'],
       time:parsedJson['time'],

@@ -4,7 +4,7 @@ class Open {
 
   Open({required this.day, required this.time});
 
-  factory Open.fromJson(Map<dynamic, dynamic> parsedJson) {
+  factory Open.fromJson(Map<String, dynamic> parsedJson) {
   return Open(
         day:parsedJson['day'],
         time:parsedJson['time'],

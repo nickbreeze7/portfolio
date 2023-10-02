@@ -1,11 +1,13 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:ui';
-
+import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+import 'package:mybarbershop/screens/home/home_screen.dart';
+import 'package:mybarbershop/screens/map/main_slider_screen.dart';
 import 'package:provider/provider.dart';
 import '../../models/place.dart';
 import '../../services/geolocator_service.dart';
@@ -59,11 +61,15 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
   GoogleMapController? mapController;
   late BitmapDescriptor customIcon;
 
+  //  추가 20230815
+  Future<List<Place>>? place;
+  //Future<List<Business>>? businesses;
+  //final Place places;
+
   void getMarkers() async {
     markers = {};
+    // List<Place>? places;
     List<Place>? places;
-
-
     places?.forEach((place) {
       if (place.geometry.location.lat != null &&
           place.geometry.location.lng != null) {
@@ -99,6 +105,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
   }
 
+
   @override
   void initState() {
     // getMarkers();
@@ -118,16 +125,16 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     final placesProvider = Provider.of<Future<List<Place>>?>(context);
     final geoService = GeoLocatorService();
     final markerService = MarkerService();
-      int currentIndex = 0;
+    int currentIndex = 0;
     // var myLocationButtonEnabled = false;
 
     return FutureProvider(
       create: (context) => placesProvider,
       initialData: null,
-        catchError: (context, error) {
+      /* catchError: (context, error) {
         print(error);
-        return 'error';
-      } ,
+        return 0;
+      } ,*/
       child: Scaffold(
         body: (currentPosition != null)
             ? Consumer<List<Place>?>(
@@ -220,7 +227,6 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                               });
                             });
                           },
-
                           itemBuilder: (_, i) {
                             return Transform.scale(
                               scale: i == _index ? 1 : 0.9,
@@ -251,25 +257,21 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                             top: 7,
                                             bottom: 7,
                                             right: 9),
-                                        child: Container(
-                                          height: 86.00,
-                                          width: 86.00,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                fit: BoxFit.fill,
-                                                /*     image: NetworkImage(
-                                                              places[0]
-                                                                  .photos![0]
-                                                                  .photoReference),*/
-                                                image: NetworkImage(
-                                                    buildPhotoURL(places[0]
-                                                        .photos![0]
-                                                        .photoReference)
-                                                )
+                                        child: ClipRRect(
+                                          child: Container(
+                                            height: 86.00,
+                                            width: 86.00,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  fit: BoxFit.fill,
+                                                  image: NetworkImage(
+                                                      buildPhotoURL(places[i].photos![0].photoReference)
+                                                  )
+                                              ),
+                                              borderRadius:
+                                              BorderRadius.circular(
+                                                  5.00),
                                             ),
-                                            borderRadius:
-                                            BorderRadius.circular(
-                                                5.00),
                                           ),
                                         ),
                                       ),
@@ -308,36 +310,38 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                                   RatingBarIndicator(
                                                     rating:
                                                     places[i].rating,
-                                                    itemBuilder: (context,
-                                                        index) =>
+                                                    itemBuilder: (context, index) =>
                                                         Icon(Icons.star,
                                                             color:
                                                             Colors.amber),
                                                     itemCount: 5,
-                                                   // itemCount: places!.length,
+                                                    // itemCount: places!.length,
                                                     itemSize: 10.0,
                                                     direction: Axis.horizontal,
                                                   )
                                                 ],
-                                              )
-                                                  : Row(),
-                                              Container(
+                                              ) :
+                                              Row(),
+                                             Container(
                                                 width: 200,
                                                 child: Text(
-                                                  places[0].openingHours!.openNow != false ? '영업중' : '영업종료',
+                                                   '${places[i].openingHours!.openNow != false ? '영업 중' : '영업종료'}',
+                                                // '\n${places[i].openingHours!.openNow ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[i].openingHours!.weekdayText)}',
+                                                //  '\n${places[i].openingHours!.openNow! ? 'Open' : 'Closed'} | ${getTodayHours(places[i].openingHours!.weekdayText!)}',
                                                   overflow:
                                                   TextOverflow
-                                                  .ellipsis,
+                                                      .ellipsis,
                                                   maxLines: 4,
                                                   style: TextStyle(
-                                                    fontFamily:
-                                                    "Montserrat",
-                                                    fontSize: 10,
-                                                    color: Color(
-                                                        0xff000000)
+                                                      fontFamily:
+                                                      "Montserrat",
+                                                      fontSize: 10,
+                                                      color: Color(
+                                                          0xff000000)
                                                   ),
                                                 ),
                                               ),
+                                              Row(),
                                               Container(
                                                 width: 200,
                                                 child: Text(
@@ -356,12 +360,12 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                                   ),
                                                 ),
                                               ),
+
                                             ],
                                           )
                                         ],
                                       ),
                                     ),
-
                                   ],
                                 ),
                               ),
@@ -371,23 +375,6 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                       ),
                     )
                 ),
-               /* Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Chip (
-                    label: Text(
-                     // '${business.openingHours.openNow ? 'Open' : 'Closed' ?? 'No Data'}: ${getTodayHours(business.openingHours.weekdayText)}',
-                    //   '\n${places[i].openingHours!.openNow!  ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[i].openingHours!.weekdayText!)}',
-                      ' ${places[i].openingHours!.openNow!  ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[i].openingHours!.weekdayText!)}',
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  backgroundColor: business.openingHours.openNow
-                  ? Colors.green
-                : Colors.red,
-                ),*/
                 SizedBox(
                   height: 10.0,
                 ),
@@ -397,7 +384,9 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (_) => MapListviewScreen()));
+                           // builder: (_) => MapListviewScreen()));
+                    builder: (_) => MainSliderScreen1()));
+
                   },
                 ),
                 SizedBox(
