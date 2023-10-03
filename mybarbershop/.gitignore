@@ -10,6 +10,11 @@
 .svn/
 migrate_working_dir/
 
+# 특정파일 제외
+place.dart
+home_screen.dart
+map_search_screen.dart
+
 # IntelliJ related
 *.iml
 *.ipr
