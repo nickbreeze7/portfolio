@@ -14,6 +14,7 @@ migrate_working_dir/
 place.dart
 home_screen.dart
 map_search_screen.dart
+place.dart 
 
 # IntelliJ related
 *.iml
