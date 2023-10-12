@@ -121,7 +121,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     _controller.complete(controller);
   }
 
-  final kGoogleApiKey = 'AIzaSyDGPBoY_wVMpu1Uci3IYHGNBJUYWxljOpA';
+  final kGoogleApiKey = 'xxxxxxxxxxxxxxxxxxxxxxxx';
   String buildPhotoURL(String photoReference) {
     //  'https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=바버샾&location=$lat,$lng&language=ko&type=hair_care|health&rankby=distance&key=$key');
     return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
