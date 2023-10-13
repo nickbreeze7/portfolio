@@ -5,7 +5,8 @@ import 'package:http/http.dart' as http;
 import '../models/place.dart';
 
  class PlacesService    {
-  final key = 'AIzaSyDGPBoY_wVMpu1Uci3IYHGNBJUYWxljOpA';
+  // Google Api
+  final key = 'XXXXXXXXXXXXXXXXXXXXXX';
   var radius = 1000;
 
   // final radius = '1500';

@@ -99,7 +99,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
     _controller.complete(controller);
   }
 
-  final kGoogleApiKey = 'AIzaSyDGPBoY_wVMpu1Uci3IYHGNBJUYWxljOpA';
+  final kGoogleApiKey = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
   String buildPhotoURL(String photoReference) {
     //return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";
     return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${kGoogleApiKey}";

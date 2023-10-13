@@ -11,8 +11,11 @@
 migrate_working_dir/
 
 # File Name
+# 특정파일 제외
+place.dart
 home_screen.dart
 map_search_screen.dart
+place.dart 
 
 # IntelliJ related
 *.iml
