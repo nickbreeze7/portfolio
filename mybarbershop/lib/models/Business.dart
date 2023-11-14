@@ -1,5 +1,8 @@
 
+import 'package:mybarbershop/models/photos.dart';
+
 class Business {
+  List<Photos>? photos;
   String? formattedAddress;
   String? formattedPhoneNumber;
   String? name;
@@ -7,6 +10,7 @@ class Business {
   List<dynamic>? types;
 
   Business({
+    required this.photos,
     required this.formattedAddress,
     required this.formattedPhoneNumber,
     required this.name,
@@ -15,6 +19,10 @@ class Business {
   });
 
   Business.fromJson(Map<String, dynamic> json) {
+    photos = (json['photos'] != null) ? json['photos']
+        .map<Photos>((parsedJson) => Photos.fromJson(parsedJson))
+        .toList() : null;
+
     formattedAddress = json['formatted_address'] != null
         ? formattedAddress = json['formatted_address']
         : null;
@@ -51,7 +59,7 @@ class OpeningHours {
   bool? openNow;
   List<String>? weekdayText;
 
-  OpeningHours({this.openNow, this.weekdayText});
+  OpeningHours({required this.openNow, required this.weekdayText});
 
   OpeningHours.fromJson(Map<String, dynamic> json) {
     openNow = json['open_now'];

@@ -8,7 +8,7 @@ import '../../services/geolocator_service.dart';
 import '../../services/marker_service.dart';
 
 class MapListviewScreen extends StatelessWidget {
-    const MapListviewScreen ({Key? key}) : super(key: key);
+    const MapListviewScreen ({Key? key, required List<Place> places}) : super(key: key);
    // MapListviewScreen({Key? key}) : super(key: key);
 
   @override
@@ -58,7 +58,7 @@ class MapListviewScreen extends StatelessWidget {
                       Expanded(
                         child: ListView.builder(
                             //shrinkWrap: true,
-                            scrollDirection: Axis.horizontal,
+                          //  scrollDirection: Axis.horizontal,
                             itemCount: places!.length,
                             itemBuilder: (context, index) {
                               return FutureProvider(

@@ -5,6 +5,10 @@ import 'package:mybarbershop/utils/global_variable.dart';
 
 import '../../utils/colors.dart';
 import '../../utils/global_variable.dart';
+import '../Map/map_screen.dart';
+import '../book/booking_screen.dart';
+import '../home/home_screen.dart';
+import '../myprofile/profile_screen.dart';
 
 class MobileScreenLayout extends StatefulWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -29,28 +33,56 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
     pageController.dispose();
   }
 
-  void onPageChanged(int page) {
+  /*void onPageChanged(int page) {
+    setState(() {
+      _page = page;
+    });
+  }*/
+
+/*
+  void navigationTapped(int page) {
+    //Animating Page
+    pageController.jumpToPage(page);
+  }
+*/
+
+  void onTabTapped(int page){
     setState(() {
       _page = page;
     });
   }
 
-  void navigationTapped(int page) {
-    //Animating Page
-    pageController.jumpToPage(page);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        physics: NeverScrollableScrollPhysics(),
-        children: homeScreenItems,
-        controller: pageController,
-        onPageChanged: onPageChanged,
+      body: IndexedStack(
+        //onPageChanged: onPageChanged,
+        index: _page,
+        children:  [
+           HomeScreen(),
+           MapScreen(),
+           BookingScreen(),
+           ProfileScreen(),
+        ]
+
+        /* child: PageView(
+          physics: NeverScrollableScrollPhysics(),
+          children: homeScreenItems,
+          controller: pageController,
+          onPageChanged: onPageChanged,
+        ),*/
+
       ),
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: mobileBackgroundColor,
+        onTap: onTabTapped,
+        currentIndex: _page,
+        //selectedIndex: _page,
+       /* onTabTapped : (int index) {
+          setState(() {
+            _page = index;
+          });
+        },*/
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
@@ -93,8 +125,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
             backgroundColor: primaryColor,
           ),
         ],
-        onTap: navigationTapped,
-        currentIndex: _page,
+
       ),
     );
   }

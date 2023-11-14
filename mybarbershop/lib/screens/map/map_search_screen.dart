@@ -6,13 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:location/location.dart';
 import 'package:mybarbershop/screens/home/home_screen.dart';
-import 'package:mybarbershop/screens/map/main_slider_screen.dart';
 import 'package:provider/provider.dart';
 import '../../models/place.dart';
 import '../../services/geolocator_service.dart';
 import '../../services/getTodayHours.dart';
 import '../../services/marker_service.dart';
+import '../../services/places_service.dart';
 import 'map_listview_screen.dart';
 
 //********* Global Variables */
@@ -29,8 +30,25 @@ var logger = Logger(
 );
 */
 
+//final currentPosition = Provider.of<Position?>(context);
+
+var location = new Location();
+LocationData? currentLocation;
+late Position? currentPosition;
+
+/*Future<void> _getLocation() async {
+  try {
+    currentLocation = await location.getLocation();
+  } catch (e) {
+    print('ERROR: $e');
+    currentLocation = null;
+  }
+}*/
+
 CameraPosition newCameraPosition =
-CameraPosition(target: LatLng(36.8141, 127.1465), zoom: 20);
+      CameraPosition(target: LatLng(36.8141, 127.1465), zoom: 20);
+     // CameraPosition(target: LatLng( currentPosition!.latitude, currentPosition!.longitude), zoom: 20);
+
 
 late LatLng newPosition;
 
@@ -181,15 +199,13 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                         height: 116, // card height
                         child: PageView.builder(
                           itemCount: places.length,
-                          controller:
-                          PageController(viewportFraction: 0.9),
+                          controller:  PageController(viewportFraction: 0.9),
                           onPageChanged: (int index) {
                             //markers
                             setState(() => _index = index
                             );
                             //indexMarker = places[index].placeId;
                             //logger.d("indexMarker:=====>>> " + indexMarker);
-
                             if (places[index]
                                 .geometry
                                 .location
@@ -264,9 +280,13 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                             decoration: BoxDecoration(
                                               image: DecorationImage(
                                                   fit: BoxFit.fill,
-                                                  image: NetworkImage(
+                                                  image:
+                                                  (places[i].photos != null)?
+                                                    NetworkImage(
                                                       buildPhotoURL(places[i].photos![0].photoReference)
                                                   )
+                                                      : AssetImage(
+                                                      'assets/barbershop.jpg') as ImageProvider
                                               ),
                                               borderRadius:
                                               BorderRadius.circular(
@@ -322,13 +342,12 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                                 ],
                                               ) :
                                               Row(),
-                                             Container(
+                                           /*  Container(
                                                 width: 200,
                                                 child: Text(
-                                                   '${places[i].openingHours!.openNow != false ? '영업 중' : '영업종료'}',
-                                                // '\n${places[i].openingHours!.openNow ? 'Open' : 'Closed' ?? 'No Data'} | ${getTodayHours(places[i].openingHours!.weekdayText)}',
-                                                //  '\n${places[i].openingHours!.openNow! ? 'Open' : 'Closed'} | ${getTodayHours(places[i].openingHours!.weekdayText!)}',
-                                                  overflow:
+                                                  places[i].openingHours!.openNow != false ? '영업 중' : '영업종료',
+                                                    //'${places[i].openingHours!.openNow ? 'Open' : 'Closed' } | ${getTodayHours(places[i].openingHours!.weekdayText)}',
+                                                      overflow:
                                                   TextOverflow
                                                       .ellipsis,
                                                   maxLines: 4,
@@ -340,7 +359,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                                                           0xff000000)
                                                   ),
                                                 ),
-                                              ),
+                                              ),*/
                                               Row(),
                                               Container(
                                                 width: 200,
@@ -385,7 +404,7 @@ class _MapSearchScreenState extends State<MapSearchScreen> {
                         context,
                         MaterialPageRoute(
                            // builder: (_) => MapListviewScreen()));
-                    builder: (_) => MainSliderScreen1()));
+                    builder: (_) => MapListviewScreen(  places: places,)));
 
                   },
                 ),
