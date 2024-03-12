@@ -1,4 +1,4 @@
-package com.nickbreeze.barbershop_near_me
+package com.example.mybarbershop.mybarbershop
 
 import io.flutter.embedding.android.FlutterActivity
 

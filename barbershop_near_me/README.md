@@ -1,6 +1,6 @@
-# barbershop_near_me
+# mybarbershop
 
-Flutter barbershop booking app
+A new Flutter project.
 
 ## Getting Started
 

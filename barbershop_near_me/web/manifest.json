@@ -1,11 +1,11 @@
 {
-    "name": "barbershop_near_me",
-    "short_name": "barbershop_near_me",
+    "name": "mybarbershop",
+    "short_name": "mybarbershop",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Flutter barbershop booking app",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
