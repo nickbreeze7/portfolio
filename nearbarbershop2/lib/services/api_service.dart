@@ -4,7 +4,10 @@ import 'package:http/http.dart' as http;
 import '../models/barbershop.dart';
 
 class ApiService {
-  final String baseUrl = 'http://localhost:3000/barbershops';
+ // final String baseUrl999 = 'http://localhost:3000/barbershops';
+  //https://barbershop2-5a51a1029617.herokuapp.com/
+  final String baseUrl = 'https://barbershop2-5a51a1029617.herokuapp.com/barbershops';
+
 
   Future<List<Barbershop>> getBarbershops(double latitude, double longitude) async {
     Uri url = Uri.parse('$baseUrl?lat=$latitude&lng=$longitude');
