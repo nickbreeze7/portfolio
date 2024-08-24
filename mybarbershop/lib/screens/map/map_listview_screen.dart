@@ -8,7 +8,7 @@ import '../../services/geolocator_service.dart';
 import '../../services/marker_service.dart';
 
 class MapListviewScreen extends StatelessWidget {
-    const MapListviewScreen ({Key? key, required List<Place> places}) : super(key: key);
+    const MapListviewScreen ({super.key, required List<Place> places});
    // MapListviewScreen({Key? key}) : super(key: key);
 
   @override
@@ -47,7 +47,7 @@ class MapListviewScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 70.0),
                         child: ElevatedButton(
-                            child: Text('지도화면으로'),
+                            child: const Text('지도화면으로'),
                             onPressed: () {
                               Navigator.pop(context);
                             }),
@@ -68,7 +68,7 @@ class MapListviewScreen extends StatelessWidget {
                                     places[index].geometry.location.lat,
                                     places[index].geometry.location.lng),
                                 initialData: null,
-                                child: Container(
+                                child: SizedBox(
                                  // width: double.infinity,// <== 이걸 사용하면 가로로 보여짐.!!!
                                   width: 200.0,
                                   //height: 160.0,
@@ -90,7 +90,7 @@ class MapListviewScreen extends StatelessWidget {
                                                           places[index].rating,
                                                       itemBuilder: (context,
                                                               index) =>
-                                                          Icon(Icons.star,
+                                                          const Icon(Icons.star,
                                                               color:
                                                                   Colors.amber),
                                                       itemCount: 5,
@@ -99,8 +99,8 @@ class MapListviewScreen extends StatelessWidget {
                                                     )
                                                   ],
                                                 )
-                                              : Row(),
-                                          SizedBox(
+                                              : const Row(),
+                                          const SizedBox(
                                             height: 5.0,
                                           ),
                                           Consumer<double?>(builder:
@@ -115,7 +115,7 @@ class MapListviewScreen extends StatelessWidget {
                                         ],
                                       ),
                                       trailing: IconButton(
-                                        icon: Icon(Icons.directions),
+                                        icon: const Icon(Icons.directions),
                                         color: Theme.of(context).primaryColor,
                                         // onPressed 누르면  예약하기로 넘어가기
                                         // markerService에  InfoWindow에 화면 크게 해서
@@ -145,7 +145,7 @@ class MapListviewScreen extends StatelessWidget {
                   }*/
                 },
               )
-            : Center(
+            : const Center(
                 child: CircularProgressIndicator(),
               ),
       ),

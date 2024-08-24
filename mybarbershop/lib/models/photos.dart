@@ -24,11 +24,11 @@ class Photos {
             : [];*/
 
     Map<String, dynamic> toJson() {
-      final Map<String, dynamic> data =  Map<String, dynamic>();
-      data['height'] = this.height;
-      data['html_attributions'] = this.htmlAttributions;
-      data['photo_reference'] = this.photoReference;
-      data['width'] = this.width;
+      final Map<String, dynamic> data =  <String, dynamic>{};
+      data['height'] = height;
+      data['html_attributions'] = htmlAttributions;
+      data['photo_reference'] = photoReference;
+      data['width'] = width;
       return data;
     }
 }

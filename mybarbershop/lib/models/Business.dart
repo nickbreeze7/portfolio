@@ -31,25 +31,25 @@ class Business {
         : null;
     name = json['name'];
     openingHours = json['opening_hours'] != null
-        ? new OpeningHours.fromJson(json['opening_hours'])
+        ? OpeningHours.fromJson(json['opening_hours'])
         : null;
     types = json['types'] != null ? types = json['types'] : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.formattedAddress != null) {
-      data['formatted_address'] = this.formattedAddress;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (formattedAddress != null) {
+      data['formatted_address'] = formattedAddress;
     }
-    if (this.formattedPhoneNumber != null) {
-      data['formatted_phone_number'] = this.formattedPhoneNumber;
+    if (formattedPhoneNumber != null) {
+      data['formatted_phone_number'] = formattedPhoneNumber;
     }
-    data['name'] = this.name;
-    if (this.openingHours != null) {
-      data['opening_hours'] = this.openingHours!.toJson();
+    data['name'] = name;
+    if (openingHours != null) {
+      data['opening_hours'] = openingHours!.toJson();
     }
-    if (this.types != null) {
-      data['types'] = this.types;
+    if (types != null) {
+      data['types'] = types;
     }
     return data;
   }
@@ -67,9 +67,9 @@ class OpeningHours {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['open_now'] = this.openNow;
-    data['weekday_text'] = this.weekdayText;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['open_now'] = openNow;
+    data['weekday_text'] = weekdayText;
     return data;
   }
 }

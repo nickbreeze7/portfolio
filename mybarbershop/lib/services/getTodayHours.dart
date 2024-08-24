@@ -2,7 +2,7 @@ import 'package:intl/intl.dart';
 import 'package:mybarbershop/main.dart';
 
 
-String  getTodayHours(List<String>? weekdayHours)  {
+String  getTodayHours(List<String> weekdayHours)  {
 
   String todayDate = DateFormat('EEEE').format(DateTime.now());
 
@@ -37,29 +37,9 @@ String  getTodayHours(List<String>? weekdayHours)  {
 
   logger.d("weekdayHours:=====================>> $weekdayHours");
 
-  /*String  todayHours =  weekdayHours[numDate]
+  String  todayHours =  weekdayHours[numDate]
       .replaceAll('$todayDate: ', '')
       .replaceAll('Closed', '')
       .replaceAll('Open ', '');
-  return todayHours;*/
-
-
-  if (weekdayHours != null && numDate >= 0 && numDate < weekdayHours.length) {
-    String todayHours = weekdayHours[numDate]
-        .replaceAll('$todayDate: ', '')
-        .replaceAll('Closed', '')
-        .replaceAll('Open ', '');
-    return todayHours;
-  } else {
-    return 'No hours available';
-  }
+  return todayHours;
 }
-
-// Path: lib/services/getTodayHours.dart
-// Compare this snippet from lib/services/places_service.dart:
-// import 'dart:convert' as convert;
-// import 'dart:convert';
-// import 'dart:io';
-// import 'dart:async';
-// import 'package:http/http.dart' as http;
-// import '../models/place.dart';

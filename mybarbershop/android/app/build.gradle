@@ -53,7 +53,7 @@ android {
 
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        targetSdk 33
+        compileSdkVersion 34
     }
 
     buildTypes {

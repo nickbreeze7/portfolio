@@ -2,7 +2,7 @@ import 'package:flutter/Material.dart';
 import '../../sign_in.dart';
 
 class HomeHeader extends  StatelessWidget {
-  const HomeHeader({Key? key}) : super(key: key);
+  const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class HomeHeader extends  StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              name + '님 안녕하세여',
+              '$name님 안녕하세여',
               style: TextStyle(color: Colors.blue[900], fontSize: 20),
             ),
             Text(

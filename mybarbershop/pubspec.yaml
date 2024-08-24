@@ -21,8 +21,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  shared_preferences: ^2.0.17
   cupertino_icons: ^1.0.5
-  google_maps_flutter: ^2.2.6
+  google_maps_flutter: ^2.2.7
   geolocator: ^9.0.2
   provider: ^6.0.5
   http: ^0.13.5
@@ -34,8 +35,10 @@ dependencies:
   logger: ^2.0.1
   intl: ^0.18.1
   carousel_slider: ^4.2.1
-  flutter_riverpod: ^2.3.7
+  flutter_riverpod: ^2.4.9
   cached_network_image: ^3.2.1
+  permission_handler: ^11.0.0
+
 
 dev_dependencies:
   flutter_test:

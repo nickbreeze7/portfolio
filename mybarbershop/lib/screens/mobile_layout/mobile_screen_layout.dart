@@ -1,17 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mybarbershop/utils/colors.dart';
-import 'package:mybarbershop/utils/global_variable.dart';
 
-import '../../utils/colors.dart';
-import '../../utils/global_variable.dart';
 import '../Map/map_screen.dart';
+import '../Map/map_search_screen.dart';
 import '../book/booking_screen.dart';
 import '../home/home_screen.dart';
 import '../myprofile/profile_screen.dart';
 
 class MobileScreenLayout extends StatefulWidget {
-  const MobileScreenLayout({Key? key}) : super(key: key);
+  const MobileScreenLayout({super.key});
 
   @override
   State<MobileScreenLayout> createState() => _MobileScreenLayoutState();
@@ -58,9 +57,10 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
       body: IndexedStack(
         //onPageChanged: onPageChanged,
         index: _page,
-        children:  [
-           HomeScreen(),
-           MapScreen(),
+        children:  const [
+            HomeScreen(),
+             MapScreen(),
+         // MapSearchScreen(),
            BookingScreen(),
            ProfileScreen(),
         ]

@@ -33,10 +33,10 @@ class OpeningHours {
    }
 
     Map<String, dynamic> toJson() {
-      final Map<String, dynamic> data = new Map<String, dynamic>();
-      data['open_now'] = this.openNow;
-      data['weekday_text'] = this.weekdayText;
-      data['periods'] = this.periods!.toList();
+      final Map<String, dynamic> data = <String, dynamic>{};
+      data['open_now'] = openNow;
+      data['weekday_text'] = weekdayText;
+      data['periods'] = periods!.toList();
       return data;
     }
 

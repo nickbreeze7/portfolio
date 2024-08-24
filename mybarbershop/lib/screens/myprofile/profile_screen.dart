@@ -7,7 +7,7 @@ import 'package:mybarbershop/sign_in.dart';
 final GoogleSignIn googleSignIn = GoogleSignIn();
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -31,7 +31,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
@@ -50,8 +50,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 radius: 60,
                 backgroundColor: Colors.transparent,
               ),
-              SizedBox(height: 40),
-              Text(
+              const SizedBox(height: 40),
+              const Text(
                 'NAME',
                 style: TextStyle(
                     fontSize: 15,
@@ -60,13 +60,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Text(
                 name,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'EMAIL',
                 style: TextStyle(
                     fontSize: 15,
@@ -75,13 +75,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               Text(
                 email,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 25,
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 40),
-              RaisedButton(
+              const SizedBox(height: 40),
+                ElevatedButton(
+                  onPressed: () {
+                    signOutGoogle();
+                    Navigator.of(context).pushAndRemoveUntil(
+                        MaterialPageRoute(builder: (context) {
+                      return const LoginPage();
+                    }), ModalRoute.withName('/'));
+                  },
+                  child: const Text('Sign Out'),
+                )
+                       /*     RaisedButton(
                 onPressed: () {
                   signOutGoogle();
                   Navigator.of(context).pushAndRemoveUntil(
@@ -100,7 +110,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40)),
-              )
+              )*/
             ],
           ),
         ),

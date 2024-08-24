@@ -8,7 +8,7 @@ import '../../services/geolocator_service.dart';
 import '../../services/marker_service.dart';
 
 class MainSliderScreen extends StatelessWidget {
-    const MainSliderScreen ({Key? key}) : super(key: key);
+    const MainSliderScreen ({super.key});
    // MapListviewScreen({Key? key}) : super(key: key);
 
 
@@ -45,7 +45,7 @@ class MainSliderScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 70.0),
                       child: ElevatedButton(
-                          child: Text('지도화면으로'),
+                          child: const Text('지도화면으로'),
                           onPressed: () {
                             Navigator.pop(context);
                           }),
@@ -68,7 +68,7 @@ class MainSliderScreen extends StatelessWidget {
                               initialData: null,
                               child: Container(
                                 child: Align(
-                                  child: Container(
+                                  child: SizedBox(
                                     //width: double.infinity,// <== 이걸 사용하면 가로로 보여짐.!!!
                                     //margin: EdgeInsets.only(bottom: 350),
                                     width: 250.0,
@@ -91,7 +91,7 @@ class MainSliderScreen extends StatelessWidget {
                                                   places[index].rating,
                                                   itemBuilder: (context,
                                                       index) =>
-                                                      Icon(Icons.star,
+                                                      const Icon(Icons.star,
                                                           color:
                                                           Colors.amber),
                                                   itemCount: 5,
@@ -100,8 +100,8 @@ class MainSliderScreen extends StatelessWidget {
                                                 )
                                               ],
                                             )
-                                                : Row(),
-                                            SizedBox(
+                                                : const Row(),
+                                            const SizedBox(
                                               height: 5.0,
                                             ),
                                             Consumer<double?>(builder:
@@ -116,7 +116,7 @@ class MainSliderScreen extends StatelessWidget {
                                           ],
                                         ),
                                         trailing: IconButton(
-                                          icon: Icon(Icons.directions),
+                                          icon: const Icon(Icons.directions),
                                           color: Theme.of(context).primaryColor,
                                           // onPressed 누르면  예약하기로 넘어가기
                                           // markerService에  InfoWindow에 화면 크게 해서
@@ -148,7 +148,7 @@ class MainSliderScreen extends StatelessWidget {
                     }*/
               },
             )
-                : Center(
+                : const Center(
                     child: CircularProgressIndicator(),
             ),
           ),
