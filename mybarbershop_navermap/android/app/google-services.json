@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "222516904418",
+    "project_id": "mybarbershopnavermap",
+    "storage_bucket": "mybarbershopnavermap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222516904418:android:2cbe2ed567de603cb179bb",
+        "android_client_info": {
+          "package_name": "com.example.mybarbershop_navermap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222516904418-lg90omlknitf6acqq6dm26e0hjqi0u6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mybarbershop_navermap",
+            "certificate_hash": "a1db2fae3c2989be05015b48fffccb794b6be965"
+          }
+        },
+        {
+          "client_id": "222516904418-712bfscpp8f3odecplql29a328iefipc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiEaeOrgqbeHR0HAM-MJ5FhJQlvW8xDYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222516904418-712bfscpp8f3odecplql29a328iefipc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
