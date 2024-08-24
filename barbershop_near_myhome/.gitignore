@@ -47,3 +47,4 @@ app.*.map.json
 
 google-services.json
 firebase_options.dart
+\.idea\.wiseGPT\
